@@ -1,24 +1,26 @@
-function firstWord(s) {
-  // your code here
-      if(s==='')
-		  return s;
+function firstWord(str) {
+  if (str === '') {
+    return str; // Return the entire string if it's empty
+  }
 
-	 let fWord = '';
-	 let space = false;
-	 for(let i of s){
-		 const ch = s[i]
+  let firstWord = '';
+  let foundSpace = false;
 
-		 if(ch==='' && !space){
-			 space = true;
-		 }else if(!space){
-			   fWord += ch;
-		 }
-	 }
-	  return fWord || s;
-	
+  for (let i = 0; i < str.length; i++) {
+    const currentChar = str[i];
+
+    if (currentChar === ' ' && !foundSpace) {
+      foundSpace = true; // Set flag when the first space is encountered
+    } else if (!foundSpace) {
+      firstWord += currentChar; // Append characters to firstWord until a space is found
+    }
+  }
+
+  return firstWord || str; // Return firstWord if not empty, otherwise return the entire string
 }
+
 
 // Do not change the code below
 
 const s = prompt("Enter String:");
-alert(firstWord(s));
+alert(firstWord(str));
