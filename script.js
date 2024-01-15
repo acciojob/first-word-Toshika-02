@@ -3,10 +3,10 @@ function firstWord(s) {
 	const str = '';
 	for(const word of s){
 		if(s.length===1){
-			//return str;
+			return str;
 		}
 	}
-	  //return s;
+	  return s;
 	
 	
 	
