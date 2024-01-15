@@ -1,14 +1,20 @@
 function firstWord(s) {
   // your code here
-	const str = '';
-	for(const word of s){
-		if(s.length===1){
-			return str;
-		}
-	}
-	  return s;
-	
-	
+      if(s==='')
+		  return s;
+
+	 let fWord = '';
+	 let space = false;
+	 for(let i of s){
+		 const ch = s[i]
+
+		 if(ch==='' && !space){
+			 space = true;
+		 }else if(!space){
+			   fWord += ch;
+		 }
+	 }
+	  return fWord || s;
 	
 }
 
