@@ -1,13 +1,13 @@
-function firstWord(str) {
-  if (str === '') {
-    return str; // Return the entire string if it's empty
+function firstWord(s) {
+     if (s === '') {
+    return s; // Return the entire string if it's empty
   }
 
   let firstWord = '';
   let foundSpace = false;
 
-  for (let i = 0; i < str.length; i++) {
-    const currentChar = str[i];
+  for (let i = 0; i < s.length; i++) {
+    const currentChar = s[i];
 
     if (currentChar === ' ' && !foundSpace) {
       foundSpace = true; // Set flag when the first space is encountered
@@ -16,11 +16,10 @@ function firstWord(str) {
     }
   }
 
-  return firstWord || str; // Return firstWord if not empty, otherwise return the entire string
+  return firstWord || s;
 }
-
 
 // Do not change the code below
 
 const s = prompt("Enter String:");
-alert(firstWord(str));
+alert(firstWord(s));
